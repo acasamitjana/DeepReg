@@ -3,6 +3,7 @@ tags:
   - Python
   - TensorFlow
   - medical image registration
+  - logitudinal image registration
   - image fusion
   - deep learning
   - neural networks
@@ -10,9 +11,15 @@ authors:
   - name: Yunguan Fu
     orcid: 0000-0002-1184-7421
     affiliation: "1, 2, 3" # (Multiple affiliations must be quoted)
+  - name: Nina Montana Brown
+    orcid: 0000-0000-0000-0000
+    affiliation: "1, 2"
   - name: Qianye Yang
     orcid: 0000-0000-0000-0000
     affiliation: "1, 2"
+
+    ... many other ;)
+
   - name: Yipeng Hu
     orcid: 0000-0003-4902-0486
     affiliation: "1, 2"
@@ -37,7 +44,24 @@ Medical image registration has a important role in the fields of medical image a
 
 `DeepReg` was designed to be used by researchers, engineers and scientists. 
 
-# Mathematics
+# Algorithms
+## Unsupervised learning
+## Weakly-supervised learning
+## Unsupervised learning with weak supervision
+## Conditional segmentation
+
+# Example applications
+## Inter-subject registration
+### Neural MR (unsupervised +/- supervision)
+### 3D ultrasound fetal?
+
+## Multimodal registration
+### Prostate (weakly with multiple labels, conditional reg.)
+### Neurosurgery (unsupervised with supervision)
+
+## Intra-subject registration with logitudinal data
+### Lung 4DCT (unsupervised +/- supervision with inter-subject sampling)
+### Prostate MR (unsupervised +/- supervision with inter-subject sampling)
 
 Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
 
@@ -53,6 +77,7 @@ You can also use plain \LaTeX for equations
 \hat f(\omega) = \int_{-\infty}^{\infty} f(x) e^{i\omega x} dx
 \end{equation}
 and refer to \autoref{eq:fourier} from text.
+
 
 # Citations
 
