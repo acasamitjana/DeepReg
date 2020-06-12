@@ -38,18 +38,27 @@ bibliography: paper.bib
 
 # Summary
 
+<<<<<<< HEAD
 Medical image registration has an important role in the fields of medical image analysis and computer assisted intervetnion
+=======
+Medical image registration has a important role in the fields of medical image analysis and computer assisted intervetnion
+>>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 
 `DeepReg` is a Python package to implement a number of deep learning algorithms for medical image registration.
 
 `DeepReg` was designed to be used by researchers, engineers and scientists. 
 
+<<<<<<< HEAD
 # Methodology
+=======
+# Algorithms
+>>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 ## Unsupervised learning
 ## Weakly-supervised learning
 ## Unsupervised learning with weak supervision
 ## Conditional segmentation
 
+<<<<<<< HEAD
 # Data IO
 ## Network (inference) input
 Compusory: moving image and fixed image
@@ -102,19 +111,31 @@ Case 3-2 multiple paired images and corresponding labels.
 
 
 # Example applications (Demos)
+=======
+# Example applications
+>>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 ## Inter-subject registration
 ### Neural MR (unsupervised +/- supervision)
 ### 3D ultrasound fetal?
 
+<<<<<<< HEAD
 ## Intra-subject registration
 ### Lung 4DCT (unsupervised +/- supervision with inter-subject sampling)
 ### Prostate logitudinal MR (unsupervised +/- supervision with inter-subject sampling)
 
+=======
+>>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 ## Multimodal registration
 ### Prostate (weakly with multiple labels, conditional reg.)
 ### Neurosurgery (unsupervised with supervision)
 
+<<<<<<< HEAD
 
+=======
+## Intra-subject registration with logitudinal data
+### Lung 4DCT (unsupervised +/- supervision with inter-subject sampling)
+### Prostate MR (unsupervised +/- supervision with inter-subject sampling)
+>>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 
 Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
 
