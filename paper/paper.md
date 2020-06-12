@@ -38,30 +38,83 @@ bibliography: paper.bib
 
 # Summary
 
-Medical image registration has a important role in the fields of medical image analysis and computer assisted intervetnion
+Medical image registration has an important role in the fields of medical image analysis and computer assisted intervetnion
 
 `DeepReg` is a Python package to implement a number of deep learning algorithms for medical image registration.
 
 `DeepReg` was designed to be used by researchers, engineers and scientists. 
 
-# Algorithms
+# Methodology
 ## Unsupervised learning
 ## Weakly-supervised learning
 ## Unsupervised learning with weak supervision
 ## Conditional segmentation
 
-# Example applications
+# Data IO
+## Network (inference) input
+Compusory: moving image and fixed image
+Optional: moving label(s) and/or fixed label(s)
+
+## Loss input
+Warped moving image and fixed image
+Warped moving label(s) and fixed image label(s)
+
+## Data loader - a superset of val / test data
+Training data loader requires a union of 'network input' and 'loss input'
+Val / test data loader requires a union of 'network input' and 'loss input'
+
+## Training sampling methods
+### Sampling for multiple labels
+In any case when corresponding labels are available and there are multiple types of labels, e.g. the segmentation of different organs in a CT image, two options are available:
+
+During one epoch, each image would be sampled only once and when there are multiple labels, we will randomly sample one label at a time. (Default)
+During one epoch, each image would be paired with each available label. So if an image has four types of labels, it will be sampled for four times and each time corresponds to a different label.
+When using multiple labels, it is the user's responsibility to ensure the labels are ordered, such that label_idx are the corresponding types in (width, height, depth, label_idx)
+
+### Sampling for multiple subjects each with multiple images
+When multiple subjects each with multiple images are available, multiple different sampling methods are supported:
+
+Inter-subject, one image is sampled from subject A as moving image, and another one image is sampled from a different subject B as fixed image.
+Intra-subject, two images are sampled from the same subject. In this case, we can specify:
+a) moving image always has a smaller index, e.g. at an earlier time;
+b) moving image always has a larger index, e.g. at a later time; or
+c) no constraint on the order.
+For the first two options, the intra-subject images will be ascending-sorted by name to represent ordered sequential images, such as time-series data
+*Multiple label sampling is also supported once image pair is sampled; In case there are no consistent label types defined between subjects, an option is available to turned off label contribution to the loss for those inter-subject image pairs.
+
+(see the Supported Data Loaders)
+
+## Network (inference) output
+Opt 1: dense displacement field (DDF), with dense velocity field (DFV) if enabled
+Opt 2 (conditional segmentation): warped moving labels 
+
+
+# Supported application scenarios
+Unpaired images (e.g. single-modality inter-subject registration)
+Case 1-1 multiple independent images.
+Case 1-2 multiple independent images and corresponding labels.
+Grouped unpaired images (e.g. single-modality intra-subject registration)
+Case 2-1 multiple subjects each with multiple images.
+Case 2-2 multiple subjects each with multiple images and corresponding labels.
+Paired images (e.g. two-modality intra-subject registration)
+Case 3-1 multiple paired images.
+Case 3-2 multiple paired images and corresponding labels.
+
+
+# Example applications (Demos)
 ## Inter-subject registration
 ### Neural MR (unsupervised +/- supervision)
 ### 3D ultrasound fetal?
+
+## Intra-subject registration
+### Lung 4DCT (unsupervised +/- supervision with inter-subject sampling)
+### Prostate logitudinal MR (unsupervised +/- supervision with inter-subject sampling)
 
 ## Multimodal registration
 ### Prostate (weakly with multiple labels, conditional reg.)
 ### Neurosurgery (unsupervised with supervision)
 
-## Intra-subject registration with logitudinal data
-### Lung 4DCT (unsupervised +/- supervision with inter-subject sampling)
-### Prostate MR (unsupervised +/- supervision with inter-subject sampling)
+
 
 Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
 
