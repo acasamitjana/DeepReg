@@ -1,5 +1,5 @@
 # CT Lung Registration
-Lungs experince motion due to breathing and the motion can be a problem when registering two images of the lung taken at different times in teh breathing cycle. This demo uses the DeepReg toolbox to create a deep learning based image registration pipeline where the training data comes from an open source dataset.
+Lungs experince motion due to breathing and the motion can be a problem when registering two images of the lung taken at different times in the breathing cycle. This demo uses the DeepReg toolbox to create a deep learning based image registration pipeline where the training data comes from an open source dataset.
 
 # The Dataset
 The dataset for this demo comes from [1] and can be downloaded from:
