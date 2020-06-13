@@ -7,22 +7,30 @@ tags:
   - image fusion
   - deep learning
   - neural networks
+
 authors:
   - name: Yunguan Fu
     orcid: 0000-0002-1184-7421
     affiliation: "1, 2, 3" # (Multiple affiliations must be quoted)
+
   - name: Nina Montana Brown
     orcid: 0000-0000-0000-0000
     affiliation: "1, 2"
+
   - name: Qianye Yang
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0003-4401-5311
     affiliation: "1, 2"
 
-    ... many other ;)
+    # ... many other ;)
+
+  - name: Tom Vercauteren
+    orcid: 0000-0003-1794-0456
+    affiliation: 4
 
   - name: Yipeng Hu
     orcid: 0000-0003-4902-0486
     affiliation: "1, 2"
+
 affiliations:
  - name: Wellcome/EPSRC Centre for Surgical and Interventional Sciences, University College London
    index: 1
@@ -30,35 +38,28 @@ affiliations:
    index: 2
  - name: InstaDeep
    index: 3
+ - name: Department of Surgical & Interventional Engineering, King’s College London, London, UK 
+   index: 4
 date: 13 August 2017
 bibliography: paper.bib
 
 
 ---
 
-# Summary
+# Introduction
 
-<<<<<<< HEAD
 Medical image registration has an important role in the fields of medical image analysis and computer assisted intervetnion
-=======
-Medical image registration has a important role in the fields of medical image analysis and computer assisted intervetnion
->>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 
 `DeepReg` is a Python package to implement a number of deep learning algorithms for medical image registration.
 
 `DeepReg` was designed to be used by researchers, engineers and scientists. 
 
-<<<<<<< HEAD
-# Methodology
-=======
 # Algorithms
->>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 ## Unsupervised learning
 ## Weakly-supervised learning
 ## Unsupervised learning with weak supervision
 ## Conditional segmentation
 
-<<<<<<< HEAD
 # Data IO
 ## Network (inference) input
 Compusory: moving image and fixed image
@@ -111,31 +112,21 @@ Case 3-2 multiple paired images and corresponding labels.
 
 
 # Example applications (Demos)
-=======
-# Example applications
->>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 ## Inter-subject registration
 ### Neural MR (unsupervised +/- supervision)
 ### 3D ultrasound fetal?
 
-<<<<<<< HEAD
 ## Intra-subject registration
 ### Lung 4DCT (unsupervised +/- supervision with inter-subject sampling)
 ### Prostate logitudinal MR (unsupervised +/- supervision with inter-subject sampling)
 
-=======
->>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 ## Multimodal registration
 ### Prostate (weakly with multiple labels, conditional reg.)
 ### Neurosurgery (unsupervised with supervision)
 
-<<<<<<< HEAD
-
-=======
 ## Intra-subject registration with logitudinal data
 ### Lung 4DCT (unsupervised +/- supervision with inter-subject sampling)
 ### Prostate MR (unsupervised +/- supervision with inter-subject sampling)
->>>>>>> 975783ffcded003e6ac8dba862cef903bba0747e
 
 Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
 
