@@ -1,4 +1,4 @@
-title: 'DeepReg: A deep-learning toolkit for medical image registration'
+title: 'DeepReg: a deep-learning toolkit for medical image registration'
 tags:
   - Python
   - TensorFlow
@@ -14,7 +14,6 @@ authors:
     affiliation: "1, 2, 3" # (Multiple affiliations must be quoted)
 
   - name: Nina Montana Brown
-    orcid: 0000-0000-0000-0000
     affiliation: "1, 2"
 
   - name: Qianye Yang
@@ -22,6 +21,9 @@ authors:
     affiliation: "1, 2"
 
     # ... many other ;)
+
+  - name: Matthew J. Clarkson
+    affiliation: "1, 2, 3"
 
   - name: Tom Vercauteren
     orcid: 0000-0003-1794-0456
@@ -40,25 +42,26 @@ affiliations:
    index: 3
  - name: Department of Surgical & Interventional Engineering, King’s College London, London, UK 
    index: 4
-date: 13 August 2017
+date: 12 August 2020
 bibliography: paper.bib
 
 
 ---
 
 # Introduction
+Image fusion is one of the fundamental tasks in medical image analysis and computer assisted intervetnion. Medical image registration, the algorithms to align different images together, has in recent years turned the curious researchers towards deep learning. Indeed, the representation ability to learn from population data with deep neural networks opened new possibilities for accelerated registration excuation during inerence, improved registration accuracy and more robust generalisation that is less-dependent on hand-engineered image features and similarity measures, for feature-based- and intensity-based image registration algorithms, respectively [ref].
 
-Medical image registration has an important role in the fields of medical image analysis and computer assisted intervetnion
+`DeepReg` is a Python package to implement a number of image registration algorithms based on deep neural networks. Both unsupervised algorithms [ref] and (weakly)-supervised algortihms [ref] are supported. In addition, combining unsupervised losses, such as those derived from image similarity measures, and weak supervision from segmented corresponding labels, such as corresponding anatomical and pathological regions, is at the core of this framework. In this paper, we outline the algorithms and several representative clinical applications, avalibale as 'demos' at the time of writting. An summary of data input and output is also provided to describe the implemented data loader and training data sampling methods. Collectively, we demonstrate the versatility of the package that can be used and adapted to a wide range of clinical applications.
 
-`DeepReg` is a Python package to implement a number of deep learning algorithms for medical image registration.
-
-`DeepReg` was designed to be used by researchers, engineers and scientists. 
-
-# Algorithms
+# Algorithms catorgorised by loss functions
 ## Unsupervised learning
+Unsupervised learning was first developed independently from a number of research groups, among which, [ref] demonstrated the applicability in real clinical applications while VoxelMorph [ref] has contributed to a popular open-source repository for several algorithms tested using brain MR images. The loss functions are often consisted of a deformation regularisation term on the predicted displacement field and an image dissimilarity measure between the fixed and warped moving images, both of which are largely adapted from the claissical image registration methods.
 ## Weakly-supervised learning
-## Unsupervised learning with weak supervision
+Weak supervision utilising segmented corresponding regions in the medical image pairs was first proposed in a multimodal application for registering prostate MR to ultrasound images. In addition to the regularisation on the predicted displacement field, the training is driven by minimising the dissimilarity between the fixed labels and warped moving labels, one that is modality-independent and similar to many other well-studied computer vision and medical imaging tasks, such as image segmentation. When multiple corresponding label pairs available, 
+## Combining unsupervised loss with weak supervision
+Combining the unsupervised loss and the weak supervision has shown superior registration accuracy, compared with that using unsupervised loss alone [ref]. 
 ## Conditional segmentation
+The latest result from a different registration formulation challenged the use of deformation regularisation, and therefore the necessity of predicting dense displacement field [ref].
 
 # Data IO
 ## Network (inference) input
