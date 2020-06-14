@@ -20,14 +20,17 @@ authors:
     orcid: 0000-0003-4401-5311
     affiliation: "1, 2"
 
-    # ... many other ;)
+  - name: Shaheer Saeed
+    affiliation: "1, 2"
 
-  - name: Matthew J. Clarkson
-    affiliation: "1, 2, 3"
+    # ... many other ;)
 
   - name: Tom Vercauteren
     orcid: 0000-0003-1794-0456
     affiliation: 4
+
+  - name: Matthew J. Clarkson
+    affiliation: "1, 2, 3"
 
   - name: Yipeng Hu
     orcid: 0000-0003-4902-0486
